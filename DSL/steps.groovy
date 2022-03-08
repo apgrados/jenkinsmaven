@@ -17,7 +17,7 @@ job('javaappDSL') {
         }
         shell('''
           echo "Entrega: Desplegando la aplicación" 
-          java -jar "/var/jenkins_home/workspace/javaappDSL/target/my-app-1.0-SNAPSHOT.jar"
+          java -jar "/root/.jenkins/workspace/MVNIntegration/target/my-app-1.0-SNAPSHOT.jar"
         ''')
     }
 }
