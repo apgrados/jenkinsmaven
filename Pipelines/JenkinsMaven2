@@ -2,13 +2,16 @@ pipeline {
     agent {
         docker {
             image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2'
+            args '-v /home/curso/testing:/voltest --name dockeramonio'
         }
     }
     stages {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
+                sh 'docker exec -it dockeramonio bash'
+                sh 'touch /voltest/fichero'
+                sh 'echo “prueba” >/voltest/fichero'
             }
         }
         stage('Test') {
