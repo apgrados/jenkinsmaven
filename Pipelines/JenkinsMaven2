@@ -9,7 +9,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
-                sh 'docker exec -it dockeramonio bash'
                 sh 'touch /voltest/fichero'
                 sh 'echo “prueba” >/voltest/fichero'
             }
