@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests clean package'
                 sh 'touch /voltest/fichero'
-                sh 'echo “prueba” >/voltest/fichero'
+                sh 'echo “jorniman” >/voltest/fichero'
             }
         }
         stage('Test') {
