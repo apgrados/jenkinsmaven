@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                echo 'Desplegando al área de desarrollo' 
+                echo 'Desplegando al área de desarrollo Jorniman' 
             }
         }
     }
